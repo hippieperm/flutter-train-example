@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:train/seat_page/widgets/lable_box.dart';
+import 'package:train/seat_page/widgets/station_info%20copy.dart';
+import 'package:train/seat_page/widgets/station_info.dart';
 
 class SeatPage extends StatelessWidget {
   const SeatPage({super.key});
@@ -6,12 +9,26 @@ class SeatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('좌석 선택'),
-      ),
-      body: Center(
-        child: Text('SeatPage'),
-      ),
-    );
+        appBar: AppBar(
+          title: Text('좌석 선택'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              StationInfo(),
+              LableBox(),
+              SeatListView(),
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('예매하기'),
+                ),
+              ),
+            ],
+          ),
+        ));
   }
 }
