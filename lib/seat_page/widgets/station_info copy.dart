@@ -6,7 +6,32 @@ class SeatListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Text('StationInfo'),
+      child: ListView(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              lable('a'),
+              lable('b'),
+              lable(''),
+              lable('c'),
+              lable('d'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
+  Container lable(String str) {
+    return Container(
+      width: 50,
+      height: 50,
+      alignment: Alignment.center,
+      child: Text(
+        str,
+        style: TextStyle(fontSize: 18),
+      ),
     );
   }
 }
