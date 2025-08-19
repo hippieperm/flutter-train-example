@@ -19,6 +19,11 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
               ),
+              child: Row(
+                children: [
+                  
+                ],
+              ),
             ),
             SizedBox(
               width: double.infinity,
