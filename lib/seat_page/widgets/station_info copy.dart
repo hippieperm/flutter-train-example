@@ -11,11 +11,11 @@ class SeatListView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              lable('a'),
-              lable('b'),
+              lable('A'),
+              lable('B'),
               lable(''),
-              lable('c'),
-              lable('d'),
+              lable('C'),
+              lable('D'),
             ],
           )
         ],
