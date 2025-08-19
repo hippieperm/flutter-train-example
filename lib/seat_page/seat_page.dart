@@ -12,22 +12,24 @@ class SeatPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('좌석 선택'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              StationInfo(),
-              LableBox(),
-              SeatListView(),
-              SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('예매하기'),
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                StationInfo(),
+                LableBox(),
+                SeatListView(),
+                SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text('예매하기'),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ));
   }
