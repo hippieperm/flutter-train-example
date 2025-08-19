@@ -19,18 +19,20 @@ class SeatListView extends StatelessWidget {
             ],
           ),
           Row(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.grey[300],
-                ),
-              )
-            ],
+            children: [seat()],
           )
         ],
+      ),
+    );
+  }
+
+  Container seat() {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.grey[300],
       ),
     );
   }
