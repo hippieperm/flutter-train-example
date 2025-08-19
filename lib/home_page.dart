@@ -32,13 +32,13 @@ class _HomePageState extends State<HomePage> {
               ),
               child: Row(
                 children: [
-                  stationArea('출발역', '선택'),
+                  stationArea('출발역', startStation ?? '선택'),
                   Container(
                     width: 2,
                     height: 50,
                     color: Colors.grey[500],
                   ),
-                  stationArea('도착역', '선택'),
+                  stationArea('도착역', endStation ?? '선택'),
                 ],
               ),
             ),
@@ -70,7 +70,15 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             );
-            if (result != null) {}
+            setState(() {
+              if (result != null) {
+                if (title == '출발역') {
+                  startStation = result;
+                } else {
+                  endStation = result;
+                }
+              }
+            });
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
