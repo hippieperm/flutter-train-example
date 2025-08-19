@@ -24,7 +24,10 @@ class SeatPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                StationInfo(),
+                StationInfo(
+                  startStation: startStation,
+                  endStation: endStation,
+                ),
                 LableBox(),
                 SeatListView(),
                 SizedBox(
