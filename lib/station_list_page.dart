@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class StationListPage extends StatelessWidget {
   const StationListPage({super.key});
@@ -22,14 +23,25 @@ class StationListPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('출발역'),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
+        separatorBuilder: (context, index) {
+          return Container(
+            height: 1,
+            color: Colors.grey,
+          );
+        },
         itemCount: stations.length,
         itemBuilder: (BuildContext context, int index) {
-          return Text(
-            stations[index],
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+          return Container(
+            height: 50,
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              stations[index],
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           );
         },
