@@ -17,19 +17,31 @@ class SeatListView extends StatelessWidget {
               lable('C'),
               lable('D'),
             ],
+          ),
+          Row(
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.grey[300],
+                ),
+              )
+            ],
           )
         ],
       ),
     );
   }
 
-  Container lable(String str) {
+  Container lable(String text) {
     return Container(
       width: 50,
       height: 50,
       alignment: Alignment.center,
       child: Text(
-        str,
+        text,
         style: TextStyle(fontSize: 18),
       ),
     );
