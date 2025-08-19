@@ -4,7 +4,14 @@ import 'package:train/seat_page/widgets/seat_list_view.dart';
 import 'package:train/seat_page/widgets/station_info.dart';
 
 class SeatPage extends StatelessWidget {
-  const SeatPage({super.key});
+  const SeatPage({
+    super.key,
+    required this.startStation,
+    required this.endStation,
+  });
+
+  final String startStation;
+  final String endStation;
 
   @override
   Widget build(BuildContext context) {
