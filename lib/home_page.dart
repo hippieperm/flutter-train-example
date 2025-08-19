@@ -6,9 +6,23 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text('HomePage'),
+      appBar: AppBar(
+        title: Text('기차 예매'),
+      ),
+      body: Column(
+        children: [
+          Container(
+            height: 200,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('좌석 선택'),
+          ),
+        ],
       ),
     );
   }
