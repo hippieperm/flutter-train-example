@@ -49,11 +49,17 @@ class _HomePageState extends State<HomePage> {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
+                  if (startStation == null && endStation == null) {
+                    return;
+                  }
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return SeatPage();
+                        return SeatPage(
+                          startStation: startStation!,
+                          endStation: endStation!,
+                        );
                       },
                     ),
                   );
