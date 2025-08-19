@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class StationInfo extends StatelessWidget {
-  const StationInfo({super.key});
+  const StationInfo({
+    super.key,
+    required this.startStation,
+    required this.endStation,
+  });
+
+  final String startStation;
+  final String endStation;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +23,7 @@ class StationInfo extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                '수서',
+                startStation,
               ),
             ),
           ),
@@ -27,7 +34,7 @@ class StationInfo extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                '부산',
+                endStation,
               ),
             ),
           ),
