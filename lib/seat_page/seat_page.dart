@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:train/seat_page/widgets/lable_box.dart';
 import 'package:train/seat_page/widgets/seat_list_view.dart';
@@ -57,6 +58,37 @@ class _SeatPageState extends State<SeatPage> {
                       if (selectedRowNum == null && selectedColNum == null) {
                         return;
                       }
+                      showCupertinoDialog(
+                        context: context,
+                        builder: (context) {
+                          return CupertinoAlertDialog(
+                            title: Text('예매 하시겠습니까?'),
+                            content:
+                                Text('좌석 : $selectedRowNum-$selectedColNum'),
+                            actions: [
+                              CupertinoDialogAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  '취소',
+                                  style: TextStyle(color: Colors.red),
+                                ),
+                              ),
+                              CupertinoDialogAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  '확인',
+                                  style: TextStyle(color: Colors.blue),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
                     },
                     child: Text('예매하기'),
                   ),
