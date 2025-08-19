@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:train/station_list_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -50,20 +51,34 @@ class HomePage extends StatelessWidget {
 
   Expanded stationArea(String title, String station) {
     return Expanded(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
-            ),
+      child: Builder(builder: (context) {
+        return GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return StationListPage(title: title);
+                },
+              ),
+            );
+          },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(station, style: TextStyle(fontSize: 40)),
+            ],
           ),
-          Text(station, style: TextStyle(fontSize: 40)),
-        ],
-      ),
+        );
+      }),
     );
   }
 }
