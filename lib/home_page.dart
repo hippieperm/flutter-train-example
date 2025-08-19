@@ -20,9 +20,25 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('좌석 선택'),
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.purple),
+                  foregroundColor: WidgetStatePropertyAll(Colors.white),
+                  textStyle: WidgetStatePropertyAll(
+                    TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  shape: WidgetStatePropertyAll(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(20),
+                    ),
+                  ),
+                ),
+                child: Text('좌석 선택'),
+              ),
             ),
           ],
         ),
