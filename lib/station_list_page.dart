@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class StationListPage extends StatelessWidget {
-  const StationListPage({super.key});
+  const StationListPage({
+    super.key,
+    required this.title,
+  });
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,7 @@ class StationListPage extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text('출발역'),
+        title: Text(title),
       ),
       body: ListView.separated(
         separatorBuilder: (context, index) {
