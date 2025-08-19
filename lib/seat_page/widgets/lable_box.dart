@@ -5,6 +5,11 @@ class LableBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('LableBox');
+    return Row(
+      children: [
+        Container(),
+        Text('선택됨'),
+      ],
+    );
   }
 }
