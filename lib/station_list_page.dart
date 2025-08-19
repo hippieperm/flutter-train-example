@@ -37,15 +37,20 @@ class StationListPage extends StatelessWidget {
         },
         itemCount: stations.length,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 50,
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.only(left: 20),
-            child: Text(
-              stations[index],
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+          return GestureDetector(
+            onTap: () {
+              Navigator.pop(context, stations[index]);
+            },
+            child: Container(
+              height: 50,
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                stations[index],
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           );
