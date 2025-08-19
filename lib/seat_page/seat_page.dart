@@ -53,7 +53,11 @@ class _SeatPageState extends State<SeatPage> {
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (selectedRowNum == null && selectedColNum == null) {
+                        return;
+                      }
+                    },
                     child: Text('예매하기'),
                   ),
                 ),
