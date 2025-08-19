@@ -62,7 +62,10 @@ class SeatListView extends StatelessWidget {
 
   GestureDetector seat(int rowNum, int colNum) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        onSelected(rowNum,colNum);
+        
+      },
       child: Container(
         width: 50,
         height: 50,
