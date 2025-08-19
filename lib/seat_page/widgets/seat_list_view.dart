@@ -46,27 +46,30 @@ class SeatListView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          seat(),
+          seat(rowNum, 1),
           SizedBox(width: 4),
-          seat(),
+          seat(rowNum, 1),
           SizedBox(width: 4),
           lable('$rowNum'),
           SizedBox(width: 4),
-          seat(),
+          seat(rowNum, 1),
           SizedBox(width: 4),
-          seat(),
+          seat(rowNum, 1),
         ],
       ),
     );
   }
 
-  Container seat() {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: Colors.grey[300],
+  GestureDetector seat(int rowNum, int colNum) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.grey[300],
+        ),
       ),
     );
   }
