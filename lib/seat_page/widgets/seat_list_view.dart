@@ -48,13 +48,13 @@ class SeatListView extends StatelessWidget {
         children: [
           seat(rowNum, 1),
           SizedBox(width: 4),
-          seat(rowNum, 1),
+          seat(rowNum, 2),
           SizedBox(width: 4),
           lable('$rowNum'),
           SizedBox(width: 4),
-          seat(rowNum, 1),
+          seat(rowNum, 3),
           SizedBox(width: 4),
-          seat(rowNum, 1),
+          seat(rowNum, 4),
         ],
       ),
     );
@@ -63,15 +63,16 @@ class SeatListView extends StatelessWidget {
   GestureDetector seat(int rowNum, int colNum) {
     return GestureDetector(
       onTap: () {
-        onSelected(rowNum,colNum);
-        
+        onSelected(rowNum, colNum);
       },
       child: Container(
         width: 50,
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.grey[300],
+          color: selectedColNum == colNum && selectedRowNum == rowNum
+              ? Colors.purple
+              : Colors.grey[300],
         ),
       ),
     );
