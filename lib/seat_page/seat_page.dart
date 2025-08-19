@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:train/seat_page/widgets/lable_box.dart';
-import 'package:train/seat_page/widgets/station_info%20copy.dart';
+import 'package:train/seat_page/widgets/seat_list_view.dart';
 import 'package:train/seat_page/widgets/station_info.dart';
 
 class SeatPage extends StatelessWidget {
