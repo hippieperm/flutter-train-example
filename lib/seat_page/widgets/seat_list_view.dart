@@ -33,7 +33,7 @@ class SeatListView extends StatelessWidget {
 
   Widget seats(int rowNum) {
     return Container(
-      margin: EdgeInsets.only(bottom: 20),
+      margin: EdgeInsets.only(bottom: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
