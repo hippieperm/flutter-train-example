@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class SeatListView extends StatelessWidget {
-  const SeatListView({super.key});
+  const SeatListView({
+    super.key,
+    required this.selectedRowNum,
+    required this.selectedColNum,
+    required this.onSelected,
+  });
+
+  final int? selectedRowNum;
+  final int? selectedColNum;
+  final void Function(int, int) onSelected;
 
   @override
   Widget build(BuildContext context) {
