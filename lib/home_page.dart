@@ -9,20 +9,23 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('기차 예매'),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            Container(
+              height: 200,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text('좌석 선택'),
-          ),
-        ],
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('좌석 선택'),
+            ),
+          ],
+        ),
       ),
     );
   }
