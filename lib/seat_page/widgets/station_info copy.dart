@@ -5,6 +5,8 @@ class SeatListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('StationInfo');
+    return Expanded(
+      child: Text('StationInfo'),
+    );
   }
 }
