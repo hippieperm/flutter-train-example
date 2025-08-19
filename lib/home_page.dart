@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:train/station_list_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String? startStation;
+  String? endStation;
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +61,8 @@ class HomePage extends StatelessWidget {
     return Expanded(
       child: Builder(builder: (context) {
         return GestureDetector(
-          onTap: () {
-            Navigator.push(
+          onTap: () async {
+            String? result = await Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) {
@@ -62,6 +70,7 @@ class HomePage extends StatelessWidget {
                 },
               ),
             );
+            if (result != null) {}
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
