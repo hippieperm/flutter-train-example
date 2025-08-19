@@ -22,20 +22,30 @@ class SeatListView extends StatelessWidget {
               lable('D'),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              seat(),
-              SizedBox(width: 4),
-              seat(),
-              SizedBox(width: 4),
-              lable('1'),
-              SizedBox(width: 4),
-              seat(),
-              SizedBox(width: 4),
-              seat(),
-            ],
+          ...List.generate(
+            20,
+            (index) => seats(index + 1),
           )
+        ],
+      ),
+    );
+  }
+
+  Widget seats(int rowNum) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          seat(),
+          SizedBox(width: 4),
+          seat(),
+          SizedBox(width: 4),
+          lable('$rowNum'),
+          SizedBox(width: 4),
+          seat(),
+          SizedBox(width: 4),
+          seat(),
         ],
       ),
     );
