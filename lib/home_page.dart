@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: 200,
@@ -21,46 +22,17 @@ class HomePage extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '출발역',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text('선택', style: TextStyle(fontSize: 40)),
-                      ],
-                    ),
-                  ),
+                  stationArea('출발역', '선택'),
                   Container(
                     width: 2,
                     height: 50,
                     color: Colors.grey[500],
                   ),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '출발역',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text('선택', style: TextStyle(fontSize: 40)),
-                      ],
-                    ),
-                  ),
+                  stationArea('도착역', '선택'),
                 ],
               ),
             ),
+            SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -71,6 +43,25 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Expanded stationArea(String title, String station) {
+    return Expanded(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(station, style: TextStyle(fontSize: 40)),
+        ],
       ),
     );
   }
