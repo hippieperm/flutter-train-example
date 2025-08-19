@@ -12,6 +12,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: WidgetStatePropertyAll(Colors.purple),
+          foregroundColor: WidgetStatePropertyAll(Colors.white),
+          textStyle: WidgetStatePropertyAll(
+            TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          shape: WidgetStatePropertyAll(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(20),
+            ),
+          ),
+        ),
+      )),
       home: HomePage(),
     );
   }
